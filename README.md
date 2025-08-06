@@ -1,7 +1,7 @@
 # JOGO-DA-FORCA-EM-LINGUAGEM-C
 ## DESENVOLVEDORAS:
 
-Nome e Matrícula: Aline Sayuri Hamawaki Kawamura || Maria Paula Barbosa Vartuli.
+Nome: Aline Sayuri Hamawaki Kawamura || Maria Paula Barbosa Vartuli.
 Curso: Engenharia de Sistemas | UFMG. 
 Disciplina: Programação e Desenvolvimento de Software I | PDS I.
 Data de entrega: 02/07/2025. 
