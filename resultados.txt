@@ -1,0 +1,40 @@
+Nome do jogador: Maria Paula
+Palavra sorteada: arroz
+Resultado: Vitoria
+
+Nome do jogador: Maria Paula
+Palavra sorteada: strogonoff
+Resultado: Vitoria
+
+Nome do jogador: Maria Paula
+Palavra sorteada: empada
+Resultado: Derrota
+
+Nome do jogador: Aline
+Palavra sorteada: lasanha
+Resultado: Derrota
+
+Nome do jogador: Maria Paula
+Palavra sorteada: tapioca
+Resultado: Vitoria
+
+Nome do jogador: Aline
+Palavra sorteada: omelete
+Resultado: Vitoria
+
+Nome do jogador: Maria Paula
+Palavra sorteada: batata
+Resultado: Vitoria
+
+Nome do jogador: Maria Paula
+Palavra sorteada: tapioca
+Resultado: Vitoria
+
+Nome do jogador: Maria
+Palavra sorteada: hamburguer
+Resultado: Derrota
+
+Nome do jogador: maria 
+Palavra sorteada: angu
+Resultado: Vitoria
+
