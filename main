@@ -1,0 +1,87 @@
+#include<stdio.h>
+#include<string.h>
+#include <ctype.h>
+#include "forca.h"
+
+int main(){
+//nome do jogador
+char nome[100];	
+printf("Escreva o seu nome: ");
+fgets (nome, 100, stdin);
+nome[strcspn(nome, "\n")]= '\0'; 
+
+char querDica[10];
+printf("\nVoce aceita uma dica?(responda S se sim ou N se nao: ");
+scanf(" %c", &querDica);
+getchar();
+if (toupper(querDica[0]) == 'S') {
+    dica(NULL);
+} else if (toupper(querDica[0]) == 'N') {
+    printf("Ok! Boa sorte!\n");
+} 
+
+//se vai ou nao continuar jogando
+char jogarNovamente= 'S';
+while(toupper(jogarNovamente)== 'S'){
+
+//chamar a função carregarPalavras
+char palavra[100];
+carregarPalavras(palavra);
+
+//variaveis usadas
+int tamanho= strlen(palavra); 
+char letrasdescobertas[100];
+int letrasusadas[26]={0};
+int erros= 0;
+int acertos= 0;
+
+for(int i=0; i<tamanho; i++){
+	letrasdescobertas[i]= '_';
+}
+
+//jogador vai digitando a letra 
+while(erros <6 && acertos < tamanho){
+	desenharForca(erros, letrasdescobertas, tamanho);
+
+	printf("\nDigite uma letra: ");
+	char letra;
+	scanf (" %c", &letra);
+	letra= toupper(letra);
+	if(verificarLetra(letra, letrasusadas)){
+		continue; 
+	}
+
+	int acertou=0;
+	for(int i=0; i<tamanho; i++){
+		if(toupper(palavra[i])== letra && letrasdescobertas[i]== '_'){
+	    letrasdescobertas[i]= palavra[i];
+	    acertou = 1;
+	    acertos++;
+	}
+}
+
+ 	if(!acertou){
+ 		erros++;
+ 	}
+}
+
+//resultados e registro
+desenharForca(erros, letrasdescobertas, tamanho);
+
+if(acertos== tamanho){
+	printf("\nVoce ganhou!\n");
+	registrarResultado(nome, palavra, 1);
+}else{
+	printf("\nVoce perdeu.\n A palavra era: %s\n", palavra);
+	registrarResultado(nome, palavra, 0);
+}
+
+//ve se quer jogar de novo
+printf("\nVoce quer jogar de novo?(escreva S se sim ou N se nao) ");
+scanf(" %c", &jogarNovamente);
+getchar();
+}
+
+printf("\nObrigada por jogar!\n");
+return 0;
+}
