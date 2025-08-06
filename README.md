@@ -53,14 +53,13 @@ Pré requisitos: 1. Ter o GCC instalado no Windows;
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## TESTES E EXEMPLOS DE EXECUÇÃO: 
 
-
-| Nº | Tipo de Teste                      | Palavra sorteada | Entradas                  | Resultado Esperado                                                | Status |
-|----|------------------------------------|------------------|---------------------------|-------------------------------------------------------------------|
-| 1  | Vitória                            | arroz            | a, r, o, z                | Palavra completada sem desenhar nenhum parte do boneco            |   OK   |
-| 2  | Vitória                            | canjica          | e, a, d, s, e, i, c, n, j | Palavra completada com 3 partes desenhadas do boneco              |   OK   |
-| 3  | Derrota                            | feijoada         | t, r, q, w, j, k, f, o, l | Derrota, retorno da palavra sorteada                              |   OK   |
-| 4  | Derrota                            | panqueca         | t, a, d, f, g, c, s, q, j | Derrota, retorno da palavra sorteada                              |   OK   |
-| 5  | Letra com mais de uma ocorrência   | panqueca         | a, n, p, q, u, e, c       | As duas letras 'a' reveladas na posição correta                   |   OK   |
-| 6  | Letra repetida                     | (qualquer)       | a, a                      | Exibe a mensagem "Voce ja tentou a letra A" e continua o jogo     |   OK   |
-| 7  | Registro de resultados             | pudim            | a, e, i, u, p, d, m       | Resultado salvo no arquivo "resultados.txt"                       |   OK   |
-| 7  | Entrada inválida                   | (qualquer)       | a, e, i, u, p, d, m       | Entrada ignorada ou mensagem de erro exibida na tela              |   OK   |
+| Nº  | Tipo de Teste                  | Palavra Sorteada | Entradas                 | Resultado Esperado                                                | Status |
+| :-: | :----------------------------- | :--------------- | :----------------------- | :---------------------------------------------------------------- | :----: |
+| 1   | Vitória                        | `arroz`          | `a, r, o, z`             | Palavra completada sem erros.                                     | OK     |
+| 2   | Vitória com erros              | `canjica`        | `e, a, d, s, i, c, n, j` | Palavra completada com 3 erros (3 partes do boneco).              | OK     |
+| 3   | Derrota                        | `feijoada`       | `t, r, q, w, j, k, f`    | Derrota por excesso de tentativas e exibe a palavra correta.      | OK     |
+| 4   | Derrota                        | `panqueca`       | `t, d, f, g, s, q, j`    | Derrota por excesso de tentativas e exibe a palavra correta.      | OK     |
+| 5   | Letra com mais de uma ocorrência | `panqueca`       | `a, n, p, q, u, e, c`    | As duas letras 'a' são reveladas na posição correta.              | OK     |
+| 6   | Letra repetida                 | (qualquer)       | `a, a`                   | Exibe a mensagem "Voce ja tentou a letra A" e continua o jogo.     | OK     |
+| 7   | Registro de resultados         | `pudim`          | `p, u, d, i, m`          | Ao final da partida, o resultado é salvo no arquivo `resultados.txt`. | OK     |
+| 8   | Entrada inválida               | (qualquer)       | `ab` ou `1` ou `.`       | Entrada é ignorada e/ou uma mensagem de erro é exibida.           | OK     |
