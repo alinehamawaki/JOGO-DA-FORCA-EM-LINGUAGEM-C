@@ -1,1 +1,19 @@
+Nome do jogador: Maria
+Palavra sorteada: tapioca
+Resultado: Derrota
 
+Nome do jogador: Maria
+Palavra sorteada: frango
+Resultado: Vitoria
+
+Nome do jogador: Aline Sayuri
+Palavra sorteada: canjica
+Resultado: Vitoria
+
+Nome do jogador: Aline Sayuri 
+Palavra sorteada: frango
+Resultado: Vitoria
+
+Nome do jogador: Aline Sayuri 
+Palavra sorteada: farofa
+Resultado: Derrota
